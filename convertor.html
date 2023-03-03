@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Currency Converter</title>
+		<script
+			src="https://kit.fontawesome.com/dc8df03dd8.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<h1>
+					Faster way to check live <br />
+					currency exchange rates
+				</h1>
+				<div class="main">
+					<div class="wrapper">
+						<div class="content show" data-child="convert">
+							<form class="form">
+								<div class="form-inputs">
+									<div class="form-group">
+										<label for="amount">Amount</label>
+										<input
+											type="number"
+											name="amount"
+											id="amount"
+											required
+											placeholder="1.00"
+										/>
+									</div>
+
+									<div class="form-selects">
+										<div class="form-select">
+											<label for="from">From</label>
+											<select class="select" name="from" id="from" required>
+												<option value="" disabled selected hidden>
+													Choose currency
+												</option>
+											</select>
+										</div>
+
+										<div class="form-select__icon switch-currencies">
+											<a><i class="fa-solid fa-right-left"></i></a>
+										</div>
+
+										<div class="form-select">
+											<label for="to">To</label>
+											<select class="select" name="to" id="to" required>
+												<option value="" disabled selected hidden>
+													Choose currency
+												</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-info">
+									<div class="loader">
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+
+									<div class="form-results">
+										<div class="form-result__item from" id="resultFrom"></div>
+
+										<div class="form-result__equals">
+											<a><i class="fa-solid fa-equals"></i></a>
+										</div>
+
+										<div class="form-result__item to" id="resultTo"></div>
+									</div>
+
+									<button type="submit" class="form-submit">Convert</button>
+								</div>
+
+								<div class="rate-information">
+									<div class="rate-conversion"></div>
+									<div class="rate-last"></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script type="module" src="./js/index.js"></script>
+		<script type="module" src="./js/events.js"></script>
+	</body>
+</html>
